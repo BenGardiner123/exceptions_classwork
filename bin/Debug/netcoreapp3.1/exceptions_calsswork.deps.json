@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "exceptions_calsswork/1.0.0": {
+        "runtime": {
+          "exceptions_calsswork.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "exceptions_calsswork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
