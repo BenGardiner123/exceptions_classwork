@@ -46,7 +46,7 @@ namespace exceptions_calsswork
     {
         //attributes
         public string RoomNumber;
-        public List<Room> ListOfPeopleInside = new List<Room>();
+        public List<Person> ListOfPeopleInside = new List<Person>();
 
         
         ///ctor
@@ -55,6 +55,20 @@ namespace exceptions_calsswork
             this.RoomNumber = roomid;
             
 
+        }
+
+        public void enterRoom(Person name)
+        {
+            this.ListOfPeopleInside.Add(name);
+            
+            name.DateAndTimeEntered = DateTime.Now;
+            
+        }
+
+        public void leaveRoom(Person name)
+        {
+            name.DateAndTimeOfExit = DateTime.Now;
+            this.ListOfPeopleInside.Remove(name);
         }
     }
 
@@ -73,13 +87,7 @@ namespace exceptions_calsswork
             Name = name;
         }
 
-        public void enterRoom(Room roomid)
-        {
-            DateAndTimeEntered = DateTime.Now;
-
-            roomid.ListOfPeopleInside.Add;
-            
-        }
+      
 
 
     }
@@ -100,6 +108,18 @@ namespace exceptions_calsswork
         {
             RoomsList.Add(roomID);
         }
+    }
+
+    class Outside
+    {
+        List <Person> RoomsList = new List<Person>();
+
+        public Outside()
+        {
+
+        }
+
+
     }
 
 }
