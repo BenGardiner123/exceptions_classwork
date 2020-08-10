@@ -18,7 +18,7 @@ namespace exceptions_calsswork
         System.Console.WriteLine("Please enter the room");
 
         try {
-               p1.enterRoom(r1, );
+               p1.enterRoom(r1);
                b1.addRoom(r1);
 
 
@@ -63,6 +63,8 @@ namespace exceptions_calsswork
         //attributes
         public string Name;
         public DateTime DateAndTimeEntered;
+
+        public DateTime DateAndTimeOfExit;
         public DateTime timeSpentinRoom;
 
         //ctor
@@ -71,10 +73,11 @@ namespace exceptions_calsswork
             Name = name;
         }
 
-        public void enterRoom(Room roomid, DateTime timeIn)
+        public void enterRoom(Room roomid)
         {
-            
-            roomid.ListOfPeopleInside.Add(this.DateAndTimeEntered);
+            DateAndTimeEntered = DateTime.Now;
+
+            roomid.ListOfPeopleInside.Add;
             
         }
 
