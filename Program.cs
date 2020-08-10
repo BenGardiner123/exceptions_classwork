@@ -18,7 +18,7 @@ namespace exceptions_calsswork
         System.Console.WriteLine("Please enter the room");
 
         try {
-               p1.enterRoom(r1);
+               r1.enterRoom(p1);
                b1.addRoom(r1);
 
 
