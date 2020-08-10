@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace exceptions_calsswork
 {
@@ -7,119 +6,75 @@ namespace exceptions_calsswork
     {
         static void Main(string[] args)
         {
-            
-        Building b1 = new Building("The Conservatory");
-        Building b2 = new Building("The Meat Factory");
-        Room r1 = new Room("CNSVR101");
-        Room r2 = new Room("CNSVR201");
-        Person p1 = new Person("Mirco Cro-Cop");
-        Person person2 = new Person("Anderson Silva");
+        DateTime FirstDate = new DateTime(2020, 8, 03, 14, 30, 0);
+        DateTime SecondDate = new DateTime(2020, 2, 23, 8, 20, 0);
 
-        System.Console.WriteLine("Please enter the room");
+        Room r1 = new Room("TD224");
+        Room r2 = new Room("AGSE111");
+        Person p1 = new Person();
+        Person p2 = new Person();
+
+        System.Console.WriteLine("Before you go into this room please tell me your names : John Doe or Jane Black ?");
+        string userInput = Console.ReadLine();
 
         try {
-               r1.enterRoom(p1);
-               b1.addRoom(r1);
 
-
-                //throw new NullReferenceException();
-
-            } catch (FormatException ex) {
-                System.Console.WriteLine($"Input can't be converted to an integer :( Closing Program - {ex.Message}");
-                //System.Environment.Exit(1);
-            } catch (NullReferenceException ex) {
-                System.Console.WriteLine($"Object doesn't exist :( Closing Program - {ex.Message}");
-                //System.Environment.Exit(1);
-            } catch (Exception ex) {
-                System.Console.WriteLine($"Something went wrong :( Closing Program - {ex.Message}");
-                //System.Environment.Exit(1);
-            } finally {
+            if (userInput == "John Doe")
+            {
+                p1.addName(userInput);
+                System.Console.WriteLine("Which room are you looking for TD224 or AGSE111 ?");
+                string userRoomInput = Console.ReadLine();
+                if (userRoomInput == "TD224")
+                {
+                    r1.enterRoom(p1);
+                    p1.setDate(FirstDate);
+                }
+            }
+            if (userInput == "Jane Black")
+            {
+                p2.addName(userInput);
+                System.Console.WriteLine("Which room are you looking for TD224 or AGSE111 ?");
+                string userRoomInput = Console.ReadLine();
+                if (userRoomInput == "TD224")
+                {
+                    r1.enterRoom(p2);
+                    p1.setDate(SecondDate);
+                }
                 
-                System.Console.WriteLine("!!!Finally block!!!");
             }
 
-
+        } catch (FormatException ex) {
+            System.Console.WriteLine($"Your input was not able to be understood :( Closing Program - {ex.Message}");
+        } catch (NullReferenceException ex) {
+            System.Console.WriteLine($"Object doesn't exist :( Closing Program - {ex.Message}");
+        } catch (Exception ex) {
+            System.Console.WriteLine($"Something went wrong :( Closing Program - {ex.Message}");
+        } finally {
+            System.Console.WriteLine("!!!Finally block!!!");
         }
-    }
 
-    class Room
-    {
-        //attributes
-        public string RoomNumber;
-        public List<Person> ListOfPeopleInside = new List<Person>();
-
+        System.Console.WriteLine("Are you both ready to leave the room?");
         
-        ///ctor
-        public Room(string roomid)
-        {
-            this.RoomNumber = roomid;
+        try {
+        
+        
             
-
-        }
-
-        public void enterRoom(Person name)
-        {
-            this.ListOfPeopleInside.Add(name);
+        } catch (FormatException ex) {
+            System.Console.WriteLine($"Input can't be converted to an integer :( Closing Program - {ex.Message}");
+            //System.Environment.Exit(1);
+        } catch (NullReferenceException ex) {
+            System.Console.WriteLine($"Object doesn't exist :( Closing Program - {ex.Message}");
+            //System.Environment.Exit(1);
+        } catch (Exception ex) {
+            System.Console.WriteLine($"Something went wrong :( Closing Program - {ex.Message}");
+            //System.Environment.Exit(1);
+        } finally {
             
-            name.DateAndTimeEntered = DateTime.Now;
-            
-        }
-
-        public void leaveRoom(Person name)
-        {
-            name.DateAndTimeOfExit = DateTime.Now;
-            this.ListOfPeopleInside.Remove(name);
-        }
-    }
-
-    class Person
-    {
-        //attributes
-        public string Name;
-        public DateTime DateAndTimeEntered;
-
-        public DateTime DateAndTimeOfExit;
-        public DateTime timeSpentinRoom;
-
-        //ctor
-        public Person(string name)
-        {
-            Name = name;
-        }
-
-      
-
-
-    }
-
-    class Building
-    {
-        //ctor
-        public string buildingName;
-        List <Room> RoomsList = new List<Room>();
-
-        public Building(string Name)
-        {
-            this.buildingName = Name;
-            
-        }
-
-        public void addRoom(Room roomID)
-        {
-            RoomsList.Add(roomID);
-        }
-    }
-
-    class Outside
-    {
-        List <Person> RoomsList = new List<Person>();
-
-        public Outside()
-        {
-
+            System.Console.WriteLine("!!!Finally block!!!");
         }
 
 
+        }
     }
 
 }
