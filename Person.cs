@@ -18,7 +18,16 @@ namespace exceptions_calsswork
         }
 
         public void addName(string userInput){
-            this.Name = userInput;
+            
+            if (this.Name == null)
+            {
+                this.Name = userInput;
+            }
+            else
+            {
+                System.Console.WriteLine("This person already has a name");
+            }
+            
         }
         public void setDate(DateTime userInput){
             this.DateAndTimeEntered = userInput;

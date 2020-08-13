@@ -8,73 +8,85 @@ namespace exceptions_calsswork
         {
         DateTime FirstDate = new DateTime(2020, 8, 03, 14, 30, 0);
         DateTime SecondDate = new DateTime(2020, 2, 23, 8, 20, 0);
-
+    
         Room r1 = new Room("TD224");
         Room r2 = new Room("AGSE111");
         Person p1 = new Person();
         Person p2 = new Person();
 
-        System.Console.WriteLine("Before you go into this room please tell me your names : John Doe or Jane Black ?");
-        string userInput = Console.ReadLine();
 
-        try {
+        System.Console.WriteLine("Before you go into this room person 1 tell me your name: John Doe or Jane Black ?");
+        string userInput = Console.ReadLine();
+        identityAssist(userInput);
+        System.Console.WriteLine($"{p1.Name} which room wil you enter? TD224 or AGSE111?");
+        string user1RoomInput = Console.ReadLine();
+        
+        
+        if (user1RoomInput == "TD224" && r1.isRoomEmpty())
+        {
+            r1.enterRoom(p1);
+            p1.setDate(FirstDate);
+        }
+        else if (user1RoomInput == "AGSE111" && r2.isRoomEmpty())
+        {
+            r2.enterRoom(p1);
+            p1.setDate(FirstDate);
+        }       
+           
+        System.Console.WriteLine($"{p2.Name} which room wil you enter TD224 or AGSE111?");
+        string user2RoomInput = Console.ReadLine();
+        
+        if (user2RoomInput == "TD224" && r1.isRoomEmpty())
+        {
+            r1.enterRoom(p2);
+            p2.setDate(SecondDate);
+        }
+        else if (user2RoomInput == "AGSE111" && r2.isRoomEmpty())
+        {
+            r2.enterRoom(p2);
+            p2.setDate(SecondDate);
+        }      
+        
+
+
+
+
+
+
+
+
+
+        void identityAssist(string userInput)
+        {
+            string person1 = "John Doe";
+            string person2 = "Jane Black";
 
             if (userInput == "John Doe")
-            {
-                p1.addName(userInput);
-                System.Console.WriteLine("Which room are you looking for TD224 or AGSE111 ?");
-                string userRoomInput = Console.ReadLine();
-                if (userRoomInput == "TD224")
                 {
-                    r1.enterRoom(p1);
-                    p1.setDate(FirstDate);
+                    p1.addName(userInput);
+                    p2.addName(person2);
                 }
-            }
-            if (userInput == "Jane Black")
-            {
-                p2.addName(userInput);
-                System.Console.WriteLine("Which room are you looking for TD224 or AGSE111 ?");
-                string userRoomInput = Console.ReadLine();
-                if (userRoomInput == "TD224")
+            else if (userInput == "Jane Black")
                 {
-                    r1.enterRoom(p2);
-                    p1.setDate(SecondDate);
+                    p1.addName(userInput);
+                    p2.addName(person1);
                 }
-                
-            }
 
-        } catch (FormatException ex) {
-            System.Console.WriteLine($"Your input was not able to be understood :( Closing Program - {ex.Message}");
-        } catch (NullReferenceException ex) {
-            System.Console.WriteLine($"Object doesn't exist :( Closing Program - {ex.Message}");
-        } catch (Exception ex) {
-            System.Console.WriteLine($"Something went wrong :( Closing Program - {ex.Message}");
-        } finally {
-            System.Console.WriteLine("!!!Finally block!!!");
+            System.Console.WriteLine($"Person 1's name is {p1.Name}");
+            System.Console.WriteLine($"Person 2's name is {p2.Name}");
+
         }
 
-        System.Console.WriteLine("Are you both ready to leave the room?");
+
+
         
-        try {
         
         
-            
-        } catch (FormatException ex) {
-            System.Console.WriteLine($"Input can't be converted to an integer :( Closing Program - {ex.Message}");
-            //System.Environment.Exit(1);
-        } catch (NullReferenceException ex) {
-            System.Console.WriteLine($"Object doesn't exist :( Closing Program - {ex.Message}");
-            //System.Environment.Exit(1);
-        } catch (Exception ex) {
-            System.Console.WriteLine($"Something went wrong :( Closing Program - {ex.Message}");
-            //System.Environment.Exit(1);
-        } finally {
-            
-            System.Console.WriteLine("!!!Finally block!!!");
+        
         }
 
 
-        }
+
     }
 
 }
