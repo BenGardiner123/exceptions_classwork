@@ -8,7 +8,14 @@ namespace exceptions_calsswork
         {
         DateTime FirstDate = new DateTime(2020, 8, 03, 14, 30, 0);
         DateTime SecondDate = new DateTime(2020, 2, 23, 8, 20, 0);
+<<<<<<< HEAD
     
+=======
+        TimeSpan stayed12 = new TimeSpan(0,0,12,0);
+        TimeSpan stayed15 = new TimeSpan(0,0,15,0);
+        TimeSpan stayed300 = new TimeSpan(0,0,300,0);
+
+>>>>>>> 4b2c897424a2805d50385c7324649b1f4e3f412e
         Room r1 = new Room("TD224");
         Room r2 = new Room("AGSE111");
         Person p1 = new Person();
@@ -66,6 +73,7 @@ namespace exceptions_calsswork
                     p1.addName(userInput);
                     p2.addName(person2);
                 }
+<<<<<<< HEAD
             else if (userInput == "Jane Black")
                 {
                     p1.addName(userInput);
@@ -83,8 +91,15 @@ namespace exceptions_calsswork
         
         
         
-        }
+=======
+            }
 
+        } catch (Exception ex) {
+            System.Console.WriteLine($"Your input was not able to be understood or something else you did :( Closing Program - {ex.Message}");
+>>>>>>> 4b2c897424a2805d50385c7324649b1f4e3f412e
+        }
+           
+       
 
 
     }
