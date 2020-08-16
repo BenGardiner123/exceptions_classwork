@@ -73,7 +73,7 @@ namespace exceptions_calsswork
             try{
                p1.setDate(userDateInput);
             }
-            catch (ArgumentException ex){
+            catch (Exception ex){
                 System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
             }
             try{
@@ -81,7 +81,7 @@ namespace exceptions_calsswork
                string lengthOfStay = Console.ReadLine();
                p1.stayHowLong(lengthOfStay);
             }
-            catch (ArgumentException ex){
+            catch (Exception ex){
                 System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
             }
 
@@ -103,7 +103,7 @@ namespace exceptions_calsswork
             try{
                p2.setDate(userDateInput);
             }
-            catch (ArgumentException ex){
+            catch (Exception ex){
                 System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
             }
             try{
@@ -111,7 +111,7 @@ namespace exceptions_calsswork
                string lengthOfStay = Console.ReadLine();
                p2.stayHowLong(lengthOfStay);
             }
-            catch (ArgumentException ex){
+            catch (Exception ex){
                 System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
             }
             
@@ -148,8 +148,10 @@ namespace exceptions_calsswork
 
 
         }
-       
 
+            r1.nameOfPersonInRoom();
+            r2.nameOfPersonInRoom();
+        
 
 
 
@@ -171,12 +173,12 @@ namespace exceptions_calsswork
             string person1 = "John Doe";
             string person2 = "Jane Black";
 
-            if (userInput == "John Doe")
+            if (userInput == "John Doe" || userInput == "john doe")
                 {
                     p1.addName(userInput);
                     p2.addName(person2);
                 }
-            else if (userInput == "Jane Black")
+            else if (userInput == "Jane Black" || userInput == "jane black")
                 {
                     p1.addName(userInput);
                     p2.addName(person1);

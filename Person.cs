@@ -8,13 +8,15 @@ namespace exceptions_calsswork
         public string Name;
         public DateTime DateAndTimeEntered;
 
+        public DateTime realDateTimeEntered;
+
         public DateTime DateAndTimeOfExit;
         public TimeSpan timeSpentinRoom;
 
         //ctor
         public Person()
         {
-           
+            
         }
 
         public void addName(string userInput){
@@ -30,10 +32,19 @@ namespace exceptions_calsswork
             
         }
         public void setDate(string userInput){
-        
-            DateTime userDate = Convert.ToDateTime(userInput);
+            DateTime userDate = new DateTime();
 
-            this.DateAndTimeEntered = userDate;
+            try{
+                userDate = Convert.ToDateTime(userInput);
+                
+            }
+            catch(FormatException ex)
+            {
+                System.Console.WriteLine($"{ex}uh oh..please enter a date");
+            }
+            userDate = this.DateAndTimeEntered;
+
+            
         }
 
         public void stayHowLong(string userInput)

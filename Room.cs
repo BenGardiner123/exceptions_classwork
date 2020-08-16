@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace exceptions_calsswork
 {
@@ -29,7 +30,8 @@ namespace exceptions_calsswork
                 if (!this.ListOfPeopleInside.Contains(name))
                 {
                     this.ListOfPeopleInside.Add(name);
-                    name.DateAndTimeEntered = DateTime.Now;
+                    
+                
                 }
             }
             catch (Exception ex) 
@@ -69,6 +71,20 @@ namespace exceptions_calsswork
             return empty;
         }
 
+         public void nameOfPersonInRoom()
+        {
+            var personName = from person in this.ListOfPeopleInside
+                             where person.Name != null
+                             select person;                          
+            foreach (var person in personName)
+            {
+                System.Console.WriteLine(this.RoomNumber);
+                System.Console.WriteLine($"Had {person.Name} in it");
+                System.Console.WriteLine($"and the real time they entered the room was {person.realDateTimeEntered} however they typed in {person.DateAndTimeEntered} ");
+                System.Console.WriteLine($"they also spent {person.timeSpentinRoom} mins in there");
+            }
+                   
+        }
         
             
     }

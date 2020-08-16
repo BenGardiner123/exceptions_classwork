@@ -11,3 +11,16 @@ C:\Users\User\Desktop\exceptions_calsswork\bin\Debug\netcoreapp3.1\exceptions_ca
 C:\Users\User\Desktop\exceptions_calsswork\obj\Debug\netcoreapp3.1\exceptions_calsswork.dll
 C:\Users\User\Desktop\exceptions_calsswork\obj\Debug\netcoreapp3.1\exceptions_calsswork.pdb
 C:\Users\User\Desktop\exceptions_calsswork\obj\Debug\netcoreapp3.1\exceptions_calsswork.genruntimeconfig.cache
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\bin\Debug\netcoreapp3.1\exceptions_calsswork.exe
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\bin\Debug\netcoreapp3.1\exceptions_calsswork.deps.json
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\bin\Debug\netcoreapp3.1\exceptions_calsswork.runtimeconfig.json
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\bin\Debug\netcoreapp3.1\exceptions_calsswork.runtimeconfig.dev.json
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\bin\Debug\netcoreapp3.1\exceptions_calsswork.dll
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\bin\Debug\netcoreapp3.1\exceptions_calsswork.pdb
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\obj\Debug\netcoreapp3.1\exceptions_calsswork.csprojAssemblyReference.cache
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\obj\Debug\netcoreapp3.1\exceptions_calsswork.csproj.CoreCompileInputs.cache
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\obj\Debug\netcoreapp3.1\exceptions_calsswork.AssemblyInfoInputs.cache
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\obj\Debug\netcoreapp3.1\exceptions_calsswork.AssemblyInfo.cs
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\obj\Debug\netcoreapp3.1\exceptions_calsswork.dll
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\obj\Debug\netcoreapp3.1\exceptions_calsswork.pdb
+C:\Users\Cooler Master\Documents\swinburne\exceptions_classwork\obj\Debug\netcoreapp3.1\exceptions_calsswork.genruntimeconfig.cache
