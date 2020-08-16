@@ -9,7 +9,7 @@ namespace exceptions_calsswork
         public DateTime DateAndTimeEntered;
 
         public DateTime DateAndTimeOfExit;
-        public DateTime timeSpentinRoom;
+        public TimeSpan timeSpentinRoom;
 
         //ctor
         public Person()
@@ -29,10 +29,21 @@ namespace exceptions_calsswork
             }
             
         }
-        public void setDate(DateTime userInput){
-            this.DateAndTimeEntered = userInput;
+        public void setDate(string userInput){
+        
+            DateTime userDate = Convert.ToDateTime(userInput);
+
+            this.DateAndTimeEntered = userDate;
         }
 
+        public void stayHowLong(string userInput)
+        {   
+            TimeSpan Time = new TimeSpan();
+            Time = TimeSpan.Parse(userInput);
+            
+            this.timeSpentinRoom = Time;
+        }
+        
 
     }
 

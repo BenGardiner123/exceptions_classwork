@@ -11,6 +11,7 @@ namespace exceptions_calsswork
 
         
         
+        
         ///ctor
         public Room(string roomid)
         {
@@ -67,6 +68,8 @@ namespace exceptions_calsswork
             }
             return empty;
         }
+
+        
             
     }
 

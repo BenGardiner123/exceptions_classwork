@@ -30,34 +30,132 @@ namespace exceptions_calsswork
         
         if (user1RoomInput == "TD224" && r1.isRoomEmpty())
         {
-            r1.enterRoom(p1);
-            p1.setDate(FirstDate);
+            try{
+                r1.enterRoom(p1);
+            }
+            catch (NullReferenceException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+            
+            System.Console.WriteLine("Please enter the date you are entering? like this e.g. 05/05/2005");
+            string userDateInput = Console.ReadLine();
+
+            try{
+               p1.setDate(userDateInput);
+            }
+            catch (ArgumentException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+
+            try{
+               System.Console.WriteLine($"{p1.Name} How long will you stay 12, 15, or 300 minutes");
+               string lengthOfStay = Console.ReadLine();
+               p1.stayHowLong(lengthOfStay);
+            }
+            catch (ArgumentException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+
+            
         }
         else if (user1RoomInput == "AGSE111" && r2.isRoomEmpty())
         {
-            r2.enterRoom(p1);
-            p1.setDate(FirstDate);
+             try{
+                r2.enterRoom(p1);
+            }
+            catch (NullReferenceException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+            
+            System.Console.WriteLine("Please enter the date you are entering? like this e.g. 05/05/2005");
+            string userDateInput = Console.ReadLine();
+
+            try{
+               p1.setDate(userDateInput);
+            }
+            catch (ArgumentException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+            try{
+               System.Console.WriteLine($"{p1.Name} How long will you stay 12, 15, or 300 minutes");
+               string lengthOfStay = Console.ReadLine();
+               p1.stayHowLong(lengthOfStay);
+            }
+            catch (ArgumentException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+
+         
         }       
            
-        //need to break these int functions
+        if(r1.isRoomEmpty()){
+            System.Console.WriteLine($"{p2.Name} TD224 is free ... in you go..");
+            try{
+                r1.enterRoom(p2);
+            }
+            catch (NullReferenceException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+            
+            System.Console.WriteLine("Please enter the date you are entering? like this e.g. 05/05/2005");
+            string userDateInput = Console.ReadLine();
 
-        System.Console.WriteLine($"{p2.Name} which room wil you enter TD224 or AGSE111?");
-        string user2RoomInput = Console.ReadLine();
-        System.Console.WriteLine($"{p2.Name} How long will you stay 12, 15, or 300 minutes");
-        string user2timeInput;
-
-        if (user2RoomInput == "TD224" && r1.isRoomEmpty())
-        {
-            r1.enterRoom(p2);
-            p2.setDate(SecondDate);
-            ///need to amke a functoin ehre that sets the time stayed fir users
+            try{
+               p2.setDate(userDateInput);
+            }
+            catch (ArgumentException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+            try{
+               System.Console.WriteLine($"{p2.Name} How long will you stay 12, 15, or 300 minutes");
+               string lengthOfStay = Console.ReadLine();
+               p2.stayHowLong(lengthOfStay);
+            }
+            catch (ArgumentException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+            
+             
         }
-        else if (user2RoomInput == "AGSE111" && r2.isRoomEmpty())
+        else 
         {
-            r2.enterRoom(p2);
-            p2.setDate(SecondDate);
-        }      
+            System.Console.WriteLine($"{p2.Name} AGSE111 is free ... in you go..");
+            try{
+                r2.enterRoom(p2);
+            }
+            catch (NullReferenceException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+            
+            System.Console.WriteLine("Please enter the date you are entering? like this e.g. 05/05/2005");
+            string userDateInput = Console.ReadLine();
+
+            try{
+               p1.setDate(userDateInput);
+            }
+            catch (ArgumentException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+            try{
+               System.Console.WriteLine($"{p2.Name} How long will you stay 12, 15, or 300 minutes");
+               string lengthOfStay = Console.ReadLine();
+               p2.stayHowLong(lengthOfStay);
+            }
+            catch (ArgumentException ex){
+                System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
+            }
+            
+
+
+        }
+       
+
+
+
+
         
+        
+   
 
 
 
