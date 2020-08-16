@@ -1,4 +1,7 @@
+
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace exceptions_calsswork
 {
@@ -6,10 +9,9 @@ namespace exceptions_calsswork
     {
         //attributes
         public string Name;
-        public DateTime DateAndTimeEntered;
-
         public DateTime realDateTimeEntered;
 
+        public DateTime DateAndTimeEntered ;
         public DateTime DateAndTimeOfExit;
         public TimeSpan timeSpentinRoom;
 
@@ -33,18 +35,9 @@ namespace exceptions_calsswork
         }
         public void setDate(string userInput){
             DateTime userDate = new DateTime();
-
-            try{
-                userDate = Convert.ToDateTime(userInput);
-                
-            }
-            catch(FormatException ex)
-            {
-                System.Console.WriteLine($"{ex}uh oh..please enter a date");
-            }
+            userDate = DateTime.Parse(userInput);
             userDate = this.DateAndTimeEntered;
-
-            
+   
         }
 
         public void stayHowLong(string userInput)

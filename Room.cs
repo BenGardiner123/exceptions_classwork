@@ -31,6 +31,7 @@ namespace exceptions_calsswork
                 {
                     this.ListOfPeopleInside.Add(name);
                     
+                    name.realDateTimeEntered = DateTime.Now;
                 
                 }
             }
@@ -80,7 +81,7 @@ namespace exceptions_calsswork
             {
                 System.Console.WriteLine(this.RoomNumber);
                 System.Console.WriteLine($"Had {person.Name} in it");
-                System.Console.WriteLine($"and the real time they entered the room was {person.realDateTimeEntered} however they typed in {person.DateAndTimeEntered} ");
+                System.Console.WriteLine($"and the real time they entered the room was {person.realDateTimeEntered}");
                 System.Console.WriteLine($"they also spent {person.timeSpentinRoom} mins in there");
             }
                    

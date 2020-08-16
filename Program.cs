@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace exceptions_calsswork
 {
@@ -43,7 +45,7 @@ namespace exceptions_calsswork
             try{
                p1.setDate(userDateInput);
             }
-            catch (ArgumentException ex){
+            catch (FormatException ex){
                 System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
             }
 
@@ -133,7 +135,7 @@ namespace exceptions_calsswork
             try{
                p1.setDate(userDateInput);
             }
-            catch (ArgumentException ex){
+            catch (FormatException ex){
                 System.Console.WriteLine($"Sorry there was s serious problem due to {ex.Message} -- shutting down ");
             }
             try{
